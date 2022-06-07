@@ -12,6 +12,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,7 +22,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', '@typescript-eslint', 'unused-imports'],
+  plugins: ['react', '@typescript-eslint', 'unused-imports', 'prettier'],
   ignorePatterns: ['.eslintrc.*', 'vite.config.*'],
   rules: {
     semi: 'off',
@@ -46,5 +47,6 @@ module.exports = {
     ],
     'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
     'react/jsx-one-expression-per-line': 0,
+    'prettier/prettier': ['error'],
   },
 }
